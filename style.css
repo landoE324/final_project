@@ -1,0 +1,55 @@
+
+.head {
+    display: inline;
+}
+
+
+#logo {
+    position: top left;
+    height: 8%;
+    width: 8%;
+    display: inline-block;
+}
+
+p {
+    left: 100px;
+    display: inline-block;
+    font-size: 1.5em;
+    color: rgb(73, 5, 73)
+}
+
+.nav {
+    overflow: hidden;
+    background-color: rgb(56, 56, 124);
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav a:hover {
+    color: purple;
+    background-color: white;
+}
+.active {
+    background-color: rgb(8, 8, 120);
+}
+
+.nav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#cart {i
+    
+}
