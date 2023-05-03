@@ -24,6 +24,58 @@
             <img src="Banner.jpg" id="banner">
         </header>
 <body>
-    <p class="text">Find your sole-mate new matches for you!</p>
+    <p class="text">LETS TIE UP SOME LOOSE ENDS</p>
+
+    <table id="orderTable">
+        <tr>
+            <td>
+                <p>Shoe</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="size">PICK YOUR SIZE</label>
+                <select name="size" id="size">
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="insurance">INSURANCE ($20 per year)</label>
+                <select name="insurance" id="insurance">
+                <option value="0">0 years</option>
+                <option value="20.00">1 year</option>
+                <option value="40.00">2 years</option>
+                <option value="60.00">3 years</option>
+            </select>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Shipping Speed</legend>
+                    <label><input type="radio" value="0" checked />STANDARD (no charge)</label>
+                    <label><input type="radio" value="25.00" />2-DAY SHIPPING ($25)</label>
+                    <label><input type="radio" value="60.00" />NEXT DAY DELIVERY ($60)</label>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td><h1 class="totalW">TOTAL</h1></td>
+            <td><input type="text" name="totalCost" id="totalCost" size="10" readonly /></td>
+        </tr>
+    </table>
+    <input type="submit" id="buttonadd" value="FINISH CHECKOUT" />
 </body>
 </html>
