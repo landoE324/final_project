@@ -50,6 +50,13 @@ p {
     font-size: 17px;
 }
 
-#cart {i
-    
+#cart {
+    height: 17px;
+    width: 17px;
+    float: right;
+}
+
+#banner {
+    width: 100%;
+    height: 200px;
 }
