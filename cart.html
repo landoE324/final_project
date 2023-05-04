@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link href="style.css" rel="stylesheet"
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" async></script>
 </head>
 
     <header>
@@ -25,7 +26,7 @@
         </header>
 <body>
     <p class="text">LETS TIE UP SOME LOOSE ENDS</p>
-
+    <form id="cart" name="cart">
     <table id="orderTable">
         <tr>
             <td>
@@ -65,9 +66,9 @@
             <td>
                 <fieldset>
                     <legend>Shipping Speed</legend>
-                    <label><input type="radio" value="0" checked />STANDARD (no charge)</label>
-                    <label><input type="radio" value="25.00" />2-DAY SHIPPING ($25)</label>
-                    <label><input type="radio" value="60.00" />NEXT DAY DELIVERY ($60)</label>
+                    <label><input id="standard" type="radio" name="shipping" value="0" checked >STANDARD (no charge)</label>
+                    <label><input id="2-day" type="radio" name="shipping" value="25.00" >2-DAY SHIPPING ($25)</label>
+                    <label><input id="nday" type="radio" name="shipping" value="60.00" >NEXT DAY DELIVERY ($60)</label>
                 </fieldset>
             </td>
         </tr>
@@ -77,5 +78,6 @@
         </tr>
     </table>
     <input type="submit" id="buttonadd" value="FINISH CHECKOUT" />
+    </form>
 </body>
 </html>
