@@ -1,6 +1,8 @@
 window.addEventListener("load",function() {
     calcCart();
     var cart = document.forms.cart;
+    cart.elements.shoe.onchange = calcCart;
+    cart.elements.insurance.onchange = calcCart;
     var shippingOptions = document.querySelectorAll('input[name="shipping"]');
     for (var i = 0; i <= shippingOptions.length; i++) {
         shippingOptions[i].onclick = calcCart;
@@ -20,16 +22,13 @@ function calcCart() {
     var cart = document.forms.cart;
     var shoeIndex = cart.elements.shoe.selectedIndex;
     var shoeCost = cart.elements.shoe.options[shoeIndex].value;
-    cart.elements.shoeCost.value = shoeCost
+    cart.elements.shoeCost.value = formatNumber(shoeCost)
     var shipCost = document.querySelector('input[name="shipping"]:checked').value;
     cart.elements.shippingCost.value = formatNumber(shipCost);
     var iIndex = cart.elements.insurance.selectedIndex;
     var iCost = cart.elements.insurance.options[iIndex].value;
-    var totalCost = shoeCost + shipCost + iCost;
-    cart.elements.totalCost.value = formatUSCurrency(totalCost);
-
-
-
+    cart.elements.iCost.value = formatNumber(iCost)
+    cart.elements.totalCost.value = formatUSCurrency(shoeCost+shipCost+iCost);
 }
 
 
