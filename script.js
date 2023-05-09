@@ -1,3 +1,7 @@
+"use strict";
+
+
+
 window.addEventListener("load",function() {
     calcCart();
     var cart = document.forms.cart;
@@ -22,13 +26,21 @@ function calcCart() {
     var cart = document.forms.cart;
     var shoeIndex = cart.elements.shoe.selectedIndex;
     var shoeCost = cart.elements.shoe.options[shoeIndex].value;
-    cart.elements.shoeCost.value = formatNumber(shoeCost)
+
+    cart.elements.shoeCost.value = formatNumber(shoeCost, 2)
+
+
     var shipCost = document.querySelector('input[name="shipping"]:checked').value;
-    cart.elements.shippingCost.value = formatNumber(shipCost);
+    cart.elements.shippingCost.value = formatNumber(shipCost, 2);
+
     var iIndex = cart.elements.insurance.selectedIndex;
     var iCost = cart.elements.insurance.options[iIndex].value;
-    cart.elements.iCost.value = formatNumber(iCost)
-    cart.elements.totalCost.value = formatUSCurrency(shoeCost+shipCost+iCost);
+
+    
+    cart.elements.iCost.value = formatNumber(iCost, 2)
+
+    
+    cart.elements.totalCost.value =  formatNumber(shoeCost+shipCost+iCost);
 }
 
 
@@ -37,8 +49,9 @@ function formatNumber(val, decimals) {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals
     });
-}
-
-function formatUSCurrency(val) {
+ }
+ 
+ function formatUSCurrency(val) {
     return val.toLocaleString('en-US', { style: "currency", currency: "USD" });
  }
+ 
